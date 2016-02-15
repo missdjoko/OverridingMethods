@@ -12,8 +12,8 @@ public class B extends A {
         j=b;
     }
 
-    void show (){
-        super.show();
+    void show (String str){ // перегрузка метода, те то же имя, но входные параметры другие
+        System.out.println(str);
         System.out.println("i, j = "+ i+", "+j);
     }
 

@@ -15,7 +15,8 @@ public class OverridingMethods {
 
         a.show();
         System.out.println();
-        b.show();
+        b.show(); // вызов метода из класса А
+        b.show(" eto stroka iz klassa B "); // вызов метода из класса В
         System.out.println();
 
        c.show();
