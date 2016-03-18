@@ -5,23 +5,34 @@ package net.missdjoko.overridingmethods;
  */
 public class OverridingMethods {
     public static void main(String[] args) {
-        C c= new C(10,12,10);
-        B c1=new C(2,3,4);
-        A c2=new C(5,6,7);
+        B b   = new B(7,8);
+        A a   = new A();
+        C c   = new C(10,12,10);
+        B bc1 = new C(2,3,4);
+        A ac2 = new C(5,6,7);
+        A ab2 = new B(1,2);
 
-        B b=new B(7,8);
-        A a= new A();
 
 
-        a.show();
-        System.out.println();
-        b.show(); // вызов метода из класса ј
-        b.show(" eto stroka iz klassa B "); // вызов метода из класса ¬
+        a.show(); // метод супер класса (класса предка)
         System.out.println();
 
-       c.show();
-      //  c1.show();
-       // c2.show();
+        b.show(); // вызов доступного метода из класса-предка (ј) // тк своего метода с таким именем и параметрами нет!!!
+        b.show(" eto stroka iz klassa B "); // вызов своего метода с таким же именем из класса ¬
+        System.out.println();
+
+        c.show();
+        System.out.println();
+
+        bc1.show(); // переопределение метода // выполн€ет свой метод
+        bc1.show("mama"); // доступен тк,  тк тип переменной -Ы class ¬ //перегрузка метода
+        System.out.println();
+
+        ac2.show(); // выполн€ет всой метод
+        System.out.println();
+
+        ab2.show(); // недоступен метод со строкой, тк тип переменной -Ы class ј
+
 
     }
 }
